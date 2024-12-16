@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background-color: black;
+}
+
+
+html {
+    height: 210vh;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+    background-color: #3399ff;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 15px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu-button:hover {
+    color: #000000;
+    background-color: #ffffff;
+    transform: scale(1.1);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    padding-top: 50px;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 20px;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #3399ff;
+}
+
+.menu-toggle:checked~.sidebar {
+    right: 0;
+}
+
+.logo-link {
+    flex: 0 0 auto;
+}
+
+.logo-link img {
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+.logo-link:hover img {
+    transform: scale(1.1);
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+.navbar {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar ul li {
+    margin: 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul a {
+    position: relative;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.navbar ul a:hover {
+    color: #3399ff;
+}
+
+.navbar ul a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: 0.3s;
+}
+
+.navbar ul a:hover::before {
+    width: 100%;
+}
+
+.login-button {
+    position: static;
+    right: 70px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.login-button:hover {
+    background-color: #3399ff;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 909px) {
+    .menu-button {
+        display: inline-block;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .login-button {
+        display: none;
+    }
+}
+
+.container_text {
+    padding-top: 250px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container_text h1 {
+    font-size: 45px;
+    color: #b200b2;
+}
+
+.container_text p1 {
+    font-size: 20px;
+}
+
+.container_text2 {
+    padding-left: 50px;
+    padding-top: 50px;
+    color: #ffffff;
+}
+
+.container_text2>h1 {
+    font-size: 30px;
+}
+
+.container_text2>p {
+    font-size: 20px;
+    color: #CD0EFD;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    padding: 10px;
+    margin: 50px;
+    background-color: #ffffff;
+    width: 300px;
+    height: 430px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 14px 28px, rgba(255, 255, 255, 0.22) 0px 10px 10px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background-color: #ffffff;
+}
+
+.card1>img {
+    width: 270px;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #ffffff;
+}
+
+.card_text {
+    padding: 10px;
+    flex-direction: row;
+    gap: 20px;
+    display: flex;
+    background-color: #ffffff;
+}
+
+.card_text>h1 {
+    font-size: 22px;
+    background-color: #ffffff;
+}
+
+.card_text>p {
+    padding-top: 5px;
+    color: #b200b2;
+    background-color: #ffffff;
+}
+
+.card_text2 {
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.card_text2>h1 {
+    padding-top: 21px;
+    font-size: 17px;
+    background-color: #ffffff;
+}
+
+.card_text2>p {
+    font-weight: 500;
+    background-color: #ffffff;
+    color: #ff901c;
+}
+
+.card_button {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.card_button>a {
+    display: block;
+    color: #ffffff;
+    padding: 8px 20px;
+    text-decoration: none;
+    background-image: linear-gradient(45deg, #3399ff, #33ccff);
+    background-size: 200% 200%;
+    border: 2px solid #acacac;
+    border-radius: 10px;
+    animation: gradientShift 3s infinite;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.card_button>a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(51, 153, 255, 0.5);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(51, 153, 255, 0.5);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(51, 153, 255, 0.5);
+    }
+}
+
+.card_button>a.animate {
+    animation: pulse 1.5s infinite, gradientShift 3s infinite;
+    /* Combina ambas as animações */
+}
+
+
+.footer {
+    background-color: #11111100;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
