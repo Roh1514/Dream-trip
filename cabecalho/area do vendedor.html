@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suporte</title>
-    <link rel="stylesheet" href="/style/suporte.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Area do Vendedor</title>
+    <link rel="stylesheet" href="/style/area do vendedor.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,44 +42,49 @@
             </nav>
             <div class="button-container">
                 <a href="/cabecalho/login.html" class="login-button">Login</a>
-            </div>
+            </div><s></s>
         </header>
-        <main class="main" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <div class="form_text">
-                <h1>Contate o nosso Suporte!</h1>
-                <div class="bar"></div>
-                <div class="bar2"></div>
+
+        <section>
+            <div class="corpo" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <h1>Área do Vendedor</h1>
+                <p class="sub-corpo">Gerencie seus Pacotes de Viagens e Excursões</p>
+                <p class="descricao">
+                    Aqui você pode cadastrar, editar e gerenciar facilmente os pacotes de viagens e excursões que deseja
+                    oferecer aos seus clientes.<br>
+                    Adicione descrições detalhadas, imagens e valores para atrair mais compradores e tornar suas ofertas
+                    ainda
+                    mais atrativas!</br>
+                </p>
+                <button class="start-btn" id="botao">Começar</button>
             </div>
-            <div class="container">
-                <div class="support-content">
-                    <h2>Como podemos ajudar você hoje?</h2>
-                    <p>Se você estiver enfrentando problemas ou tiver dúvidas, nossa equipe de suporte está pronta para
-                        ajudar.
-                    </p>
+        </section>
 
-                    <form action="#" method="POST">
-                        <label for="name">Nome</label>
-                        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+        <section>
+            <div class="form-section" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <h2>Adicione aqui suas viagens e excursões:</h2>
+                <p class="highlight">Preencha aqui abaixo:</p>
+                <div class="form-container" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                    <form>
+                        <h3>Adicione um Pacote de Viagens:</h3>
+                        <label for="destinos">Destinos</label>
+                        <input type="text" id="destinos" placeholder="Destinos">
 
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                        <label for="preco">Preço</label>
+                        <input type="text" id="preco" placeholder="Preço (R$)">
 
-                        <label for="subject">Assunto</label>
-                        <select id="subject" name="subject" required>
-                            <option value="duvida">Dúvida</option>
-                            <option value="problema">Problema</option>
-                            <option value="sugestao">Sugestão</option>
-                            <option value="outros">Outros</option>
-                        </select>
+                        <label for="descricao">Descrição</label>
+                        <textarea id="descricao" placeholder="Descreva o seu pacote:"></textarea>
 
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Descreva sua mensagem aqui"
-                            required></textarea>
-                        <button type="submit">Enviar</button>
+                        <button type="submit" class="submit-btn">Adicionar</button>
                     </form>
+                    <div class="form-image">
+                        <img src="/assets/imagem area do vendedor.png" alt="Pacote de Viagens">
+                    </div>
                 </div>
             </div>
-        </main>
+        </section>
+
         <footer>
             <div class="footer">
                 &copy; 2024 Dream Trip. Todos os direitos reservados.
@@ -90,6 +95,7 @@
         <script>
             AOS.init();
         </script>
+
 </body>
 
 </html>
